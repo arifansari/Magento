@@ -1,0 +1,54 @@
+Get the path of your magento page.
+
+1
+echo $this->getUrl('mypage');
+Get the path of the image in your skin folder.
+
+1
+echo $this->getSkinUrl('images/yourimage.gif');
+Get the product link.
+
+echo $this->getProductData()->getProductUrl();
+Get the product name.
+
+echo $this->htmlEscape($this->getProductData()->getName());
+Call a static block in .phtml file.
+
+echo $this->getLayout()->createBlock('cms/block')->setBlockId('YOURBLOCKID')->toHtml();
+Get Image url of current category.
+
+echo $this->getCurrentCategory()->getImageUrl();
+Check whether the current category is Top category.
+
+echo $this->IsTopCategory();
+Get description of current category.
+
+echo $this->getCurrentCategory()->getDescription();
+Display products list page (list.phtml).
+
+echo $this->getProductListHtml();
+Display CMS block page.
+
+echo $this->getCmsBlockHtml();
+
+Get current store id.
+
+echo $storeId = Mage::app()->getStore()->getId();
+Get current store name.
+
+echo $storeName = Mage::app()->getStore()->getName();
+Get current store code.
+
+echo $storeCode = Mage::app()->getStore()->getCode();
+Get website name.
+
+echo $websiteName = Mage::app()->getWebsite()->getName();
+Get session id.
+
+echo $sessionId = Mage::getModel('core/session')->getSessionId();
+Get customer id.
+
+echo $customerId = Mage::getModel('customer/session')->getCustomerId();
+Get guest id.
+
+echo $vistitorId = Mage::getModel('core/session')->getVisitorId();
